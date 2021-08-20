@@ -1,21 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild,AfterViewInit } from '@angular/core';
 import { OverlayContainer } from '@angular/cdk/overlay';
 import { ThemeService } from './services/theme.service';
 import { Observable } from 'rxjs';
+import { BreakpointObserver } from '@angular/cdk/layout';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
+  @ViewChild(MatSidenav)
+  sidenav!: MatSidenav;
+
   title = 'ng-crm';
 
   isDark$: Observable<boolean> | null = null;
 
   constructor(
     private themeService: ThemeService,
-    private overlayContainer: OverlayContainer
+    private overlayContainer: OverlayContainer,
+    private observer: BreakpointObserver
   ) {}
 
   ngOnInit(): void {
@@ -42,5 +48,17 @@ export class AppComponent {
     } else {
       overlayContainerElement.classList.remove(themeWrapperClass);
     }
+  }
+
+  ngAfterViewInit() {
+    this.observer.observe(['(max-width: 800px)']).subscribe((res) => {
+      if (res.matches) {
+        this.sidenav.mode = 'over';
+        this.sidenav.close();
+      } else {
+        this.sidenav.mode = 'side';
+        this.sidenav.open();
+      }
+    });
   }
 }
