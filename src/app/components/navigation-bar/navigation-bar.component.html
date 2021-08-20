@@ -1,0 +1,60 @@
+<mat-toolbar color="primary" class="nav-bar mat-elevation-z2">
+  <mat-label>Centre</mat-label>
+  <span class="spacer"></span>
+  <div class="nav-bar-item-wrapper">
+    <button mat-button>
+      <a class="nav-bar-item" routerLink="/home">Home</a>
+    </button>
+
+    <button mat-button [matMenuTriggerFor]="adminMenu">Admin</button>
+    <mat-menu #adminMenu="matMenu" yPosition="below">
+      <button mat-menu-item>User</button>
+      <button mat-menu-item>Product</button>
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="reportsMenu">Report</button>
+    <mat-menu #reportsMenu="matMenu" yPosition="below">
+      <button mat-menu-item>By Person</button>
+      <button mat-menu-item>By Product</button>
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="dailyMenu">Daily</button>
+    <mat-menu #dailyMenu="matMenu" yPosition="below">
+      <button mat-menu-item>Place Order</button>
+      <button mat-menu-item>Plan Itinerary</button>
+      <button mat-menu-item>Post Itinerary</button>
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="accountMenu" color="accent">
+      {{ userName }} <mat-icon>arrow_drop_down</mat-icon>
+    </button>
+    <mat-menu #accountMenu="matMenu" yPosition="below">
+      <button mat-menu-item>Manage Your Account</button>
+      <button mat-menu-item>Sign out</button>
+    </mat-menu>
+
+    <button mat-button>
+      <a class="nav-bar-item" routerLink="/about">About Me</a>
+    </button>
+  </div>
+  <button
+    mat-icon-button
+    type="button"
+    class="mat-focus-indicator"
+    [title]="darkToolTip"
+    [attr.aria-label]="darkToolTip"
+    (click)="toggleDarkTheme()"
+  >
+    <mat-icon *ngIf="!isDark">dark_mode</mat-icon>
+    <mat-icon *ngIf="isDark">light_mode</mat-icon>
+  </button>
+
+  <button mat-button>
+    <a class="nav-bar-item" *ngIf="siteLanguage === 'English'" href="/fr/"
+      >Français</a
+    >
+    <a class="nav-bar-item" *ngIf="siteLanguage !== 'English'" href="/en/"
+      >English</a
+    >
+  </button>
+</mat-toolbar>

@@ -1,1 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/theming";
+
+@import "./normal";
+
+@include mat-core();
+
+$angular-primary: mat-palette($mat-indigo);
+$angular-accent: mat-palette($mat-pink, A200, A100, A400);
+$angular-warn: mat-palette($mat-red);
+
+$angular-default-theme: mat-light-theme(
+  (
+    color: (
+      primary: $angular-primary,
+      accent: $angular-accent,
+      warn: $angular-warn,
+    ),
+  )
+);
+
+
+
+@include angular-material-theme($angular-default-theme);
+
+$dark-primary: mat-palette($mat-indigo, 900);
+$dark-accent: mat-palette($mat-amber, A200, A100, A400);
+$dark-warn: mat-palette($mat-deep-orange);
+
+$angular-dark-theme: mat-dark-theme(
+  (
+    color: (
+      primary: $dark-primary,
+      accent: $dark-accent,
+      warn: $dark-warn,
+    ),
+  )
+);
+
+.darkMode {
+  @include angular-material-color($angular-dark-theme);
+}

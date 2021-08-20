@@ -3,16 +3,28 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialCenterModule } from './material-center.module';
+import { NavigationBarComponent } from './components/navigation-bar/navigation-bar.component';
+import { HomeComponent } from './components/home/home.component';
+import { NavigationFooterComponent } from './components/navigation-footer/navigation-footer.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavigationBarComponent,
+    HomeComponent,
+    NavigationFooterComponent,
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MaterialCenterModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,0 +1,26 @@
+.nav-bar {
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  .nav-bar-item {
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  .nav-bar-item:hover {
+    opacity: 0.6;
+  }
+}
+.spacer {
+  flex: 1 1 auto;
+}
+
+.nav-bar-item-wrapper {
+  display: inline;
+}
+
+@media screen and (max-width: 960px) {
+  .nav-bar-item-wrapper {
+    display: none;
+  }
+}

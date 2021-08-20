@@ -1,0 +1,8 @@
+<div class="site-wrapper  mat-app-background" [class.darkMode]="isDark$ | async">
+  <app-navigation-bar> </app-navigation-bar>
+  <app-sidebar></app-sidebar>
+  <div class="container">
+    <router-outlet></router-outlet>
+    <app-navigation-footer></app-navigation-footer>
+  </div>
+</div>
