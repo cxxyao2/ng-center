@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +12,9 @@ import { NavigationBarComponent } from './components/navigation-bar/navigation-b
 import { HomeComponent } from './components/home/home.component';
 import { NavigationFooterComponent } from './components/navigation-footer/navigation-footer.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { ResponsiveCardComponent } from './mock/responsive-card/responsive-card.component';
+import { ConfirmComponent } from './dialogs/confirm/confirm.component';
+import { ConfirmCallerComponent } from './dialogs/confirm-caller/confirm-caller.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +23,17 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     HomeComponent,
     NavigationFooterComponent,
     SidebarComponent,
+    ResponsiveCardComponent,
+    ConfirmComponent,
+    ConfirmCallerComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     BrowserAnimationsModule,
     MaterialCenterModule,
+    FlexLayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
