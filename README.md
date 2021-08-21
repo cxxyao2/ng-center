@@ -23,3 +23,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - useful directives: fxLayout and fxFlex. convert elements into flexible containers
 
 - predefined breakpoints are xs, sm, md, lg. Xs is used for mobile screen sizes, sm for close to tablet size screens and md, lg for desktop.
+
+## lazyloading dialog
+
+- tsconfig.app.json, add
+
+  "include": [
+  "src/**/*.d.ts", "src/app/dialogs/*/*.component.ts"
+  ]
+
+-

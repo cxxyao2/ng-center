@@ -15,6 +15,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ResponsiveCardComponent } from './mock/responsive-card/responsive-card.component';
 import { ConfirmComponent } from './dialogs/confirm/confirm.component';
 import { ConfirmCallerComponent } from './dialogs/confirm-caller/confirm-caller.component';
+import { LazyDialogCallerComponent } from './components/lazy-dialog-caller/lazy-dialog-caller.component';
+import { VideoDialogComponent } from './lazy-dialogs/video-dialog/video-dialog.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { ConfirmCallerComponent } from './dialogs/confirm-caller/confirm-caller.
     ResponsiveCardComponent,
     ConfirmComponent,
     ConfirmCallerComponent,
+    LazyDialogCallerComponent,
+    VideoDialogComponent,
   ],
   imports: [
     BrowserModule,
