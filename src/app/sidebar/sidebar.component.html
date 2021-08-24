@@ -1,17 +1,19 @@
 <mat-toolbar class="mat-elevation-z8">
-    <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
-        <mat-icon >
-            menu
-        </mat-icon>
-    </button>
-    Responsive side navigation
+  <button
+    mat-icon-button
+    *ngIf="sidenav.mode === 'over'"
+    (click)="sidenav.toggle()"
+  >
+    <mat-icon> menu </mat-icon>
+  </button>
+  Responsive side navigation
 </mat-toolbar>
 
 <mat-sidenav-container>
   <mat-sidenav class="mat-elevation-z8">
     <img
       class="avatar mat-elevation-z8"
-      src="https://source.unsplash.com/c_GmwfHBDzk/200x200"
+      src="https://source.unsplash.com/random/200×200/?girl"
     />
 
     <h4 class="name">John Smith</h4>
