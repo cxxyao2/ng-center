@@ -5,11 +5,11 @@ import { map, shareReplay } from 'rxjs/operators';
 import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  selector: 'crm-sidebar',
+  templateUrl: './sidebar.component.html',
+  styleUrls: ['./sidebar.component.scss'],
 })
-export class AppComponent implements AfterViewInit {
+export class SidebarComponent implements AfterViewInit {
   @ViewChild(MatSidenav)
   sidenav!: MatSidenav;
 
