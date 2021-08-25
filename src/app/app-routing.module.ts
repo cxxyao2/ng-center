@@ -5,16 +5,16 @@ import { Draggrop1Component } from './mat-schematics/draggrop1/draggrop1.compone
 import { Address1Component } from './mat-schematics/address1/address1.component';
 import { Dashboard1Component } from './mat-schematics/dashboard1/dashboard1.component';
 
-const routes: Routes = [
-  { path: 'drag', component: Draggrop1Component },
-  { path: 'tree', component: Tree1Component },
-  { path: 'address', component: Address1Component },
-  { path: 'dash', component: Dashboard1Component },
-  { path: '', redirectTo: '/drag', pathMatch: 'full' },
-  { path: '**', component: Draggrop1Component },
-];
+// const routes: Routes = [
+//   { path: 'drag', component: Draggrop1Component },
+//   { path: 'tree', component: Tree1Component },
+//   { path: 'address', component: Address1Component },
+//   { path: 'dash', component: Dashboard1Component },
+//   { path: '', redirectTo: '/drag', pathMatch: 'full' },
+//   { path: '**', component: Draggrop1Component },
+// ];
 
-// const routes: Routes = [];
+const routes: Routes = [];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],

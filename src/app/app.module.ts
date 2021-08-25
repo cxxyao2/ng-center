@@ -12,6 +12,10 @@ import { Dashboard1Component } from './mat-schematics/dashboard1/dashboard1.comp
 import { Tree1Component } from './mat-schematics/tree1/tree1.component';
 import { Draggrop1Component } from './mat-schematics/draggrop1/draggrop1.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { ConfirmComponent } from './shared/confirm/confirm.component';
+import { ConfirmCallerComponent } from './shared/confirm-caller/confirm-caller.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { TopNavComponent } from './components/top-nav/top-nav.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +26,10 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     Tree1Component,
     Draggrop1Component,
     SidebarComponent,
+    ConfirmComponent,
+    ConfirmCallerComponent,
+    NavbarComponent,
+    TopNavComponent,
   ],
   imports: [
     BrowserModule,

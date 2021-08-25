@@ -15,8 +15,8 @@ $angular-default-theme: mat-light-theme(
   $angular-warn
 );
 
-$dark-primary: mat-palette($mat-blue, 900);
-$dark-accent: mat-palette($mat-cyan, 500, A100, A400);
+$dark-primary: mat-palette($mat-cyan, 800);
+$dark-accent: mat-palette($mat-cyan, 500);
 $dark-warn: mat-palette($mat-orange,400,A100);
 
 $angular-dark-theme: mat-dark-theme(
