@@ -1,13 +1,11 @@
-mat-toolbar {
-  background: #004a9f;
-  color: white;
-}
+@import "./theme";
+
 
 mat-sidenav {
   margin: 16px;
   width: 200px;
   border-right: none;
-  background: #002b5c;
+  background: mat-color($angular-primary);
   color: white;
   border-radius: 10px;
   padding: 16px;
