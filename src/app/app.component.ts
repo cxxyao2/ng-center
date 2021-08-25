@@ -13,7 +13,7 @@ import { BreakpointObserver } from '@angular/cdk/layout';
 export class AppComponent implements AfterViewInit {
   isDark$: Observable<boolean> | null = null;
   @ViewChild(MatSidenav)
-  sidenav！: MatSidenav;
+  sidenav!: MatSidenav;
 
   constructor(
     private themeService: ThemeService,
