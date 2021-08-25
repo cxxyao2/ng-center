@@ -16,6 +16,7 @@ import { ConfirmComponent } from './shared/confirm/confirm.component';
 import { ConfirmCallerComponent } from './shared/confirm-caller/confirm-caller.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { TopNavComponent } from './components/top-nav/top-nav.component';
+import { SidebarListItemComponent } from './components/sidebar-list-item/sidebar-list-item.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { TopNavComponent } from './components/top-nav/top-nav.component';
     ConfirmCallerComponent,
     NavbarComponent,
     TopNavComponent,
+    SidebarListItemComponent,
   ],
   imports: [
     BrowserModule,
