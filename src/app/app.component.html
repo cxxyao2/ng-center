@@ -1,15 +1,5 @@
 <div [class.darkMode]="isDark$ | async">
-  <mat-toolbar color="primary" class="mat-elevation-z8">
-    <button
-      mat-icon-button
-      *ngIf="sidenav.mode === 'over'"
-      (click)="sidenav.toggle()"
-    >
-      <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
-      <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
-    </button>
-    Responsive side navigation
-  </mat-toolbar>
+  <crm-top-nav></crm-top-nav>
   <mat-sidenav-container>
     <mat-sidenav #sidenav="matSidenav">
       <img
@@ -25,7 +15,7 @@
         <mat-icon>home</mat-icon>
         <span>Home</span>
       </button>
-      <button mat-button class="menu-button"  [routerLink]="['/tree']">
+      <button mat-button class="menu-button" [routerLink]="['/tree']">
         <mat-icon>person</mat-icon>
         <span>Profile</span>
       </button>
