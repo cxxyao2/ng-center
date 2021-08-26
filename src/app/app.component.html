@@ -1,4 +1,4 @@
-<div [class.darkMode]="isDark$ | async">
+<div [class.darkMode]="isDark$ | async" >
   <crm-top-nav></crm-top-nav>
   <mat-sidenav-container>
     <mat-sidenav #sidenav="matSidenav">
@@ -18,8 +18,9 @@
       <crm-sidebar-list-item></crm-sidebar-list-item>
     </mat-sidenav>
     <mat-sidenav-content
-      ><div class="content mat-elevation-z8">
-        <router-outlet></router-outlet></div
-    ></mat-sidenav-content>
+      ><div class="content mat-elevation-z8" >
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
   </mat-sidenav-container>
 </div>

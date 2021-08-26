@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { MatSidenav } from '@angular/material/sidenav';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { NavService } from './services/nav.service';
+import { delay } from 'rxjs/operators';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,6 +13,7 @@ import { NavService } from './services/nav.service';
 })
 export class AppComponent implements AfterViewInit {
   isDark$: Observable<boolean> | null = null;
+  title = 'ngCenter';
   @ViewChild(MatSidenav)
   sidenav!: MatSidenav;
 
@@ -49,7 +51,7 @@ export class AppComponent implements AfterViewInit {
   }
   ngAfterViewInit() {
     this.navService.appDrawer = this.sidenav;
-    this.observer.observe(['(max-width: 800px)']).subscribe((res) => {
+    this.observer.observe(['(max-width: 800px)']).pipe(delay(1)).subscribe((res) => {
       if (res.matches) {
         this.sidenav.mode = 'over';
         this.sidenav.close();

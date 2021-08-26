@@ -21,6 +21,8 @@ body {
 *::after,
 *::before {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 @include angular-material-theme($angular-default-theme);
@@ -45,6 +47,3 @@ p {
 .spacer {
   flex: 1;
 }
-
-
-
